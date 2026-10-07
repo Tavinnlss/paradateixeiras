@@ -11,7 +11,7 @@ const wa = whatsappLink('Olá! Quero fazer um pedido na Parada Teixeiras.')
     <div class="header-inner">
       <a class="brand" href="#inicio" @click="open = false">
         <span class="brand-logo">
-          <img src="/images/logo.png" alt="Logo Parada Teixeiras" />
+          <img src="/images/logoparadatexas.jpg" alt="Logo Parada Teixeiras" />
         </span>
         <span class="brand-text">
           <strong>PARADA</strong>
