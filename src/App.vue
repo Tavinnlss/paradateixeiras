@@ -25,16 +25,16 @@ const wa = whatsappLink('Olá! Quero fazer um pedido na Parada Teixeiras.')
     <v-main>
       <HeroSlider />
       <HighlightsBar />
+      <MenuSection />
       <DayNightSection />
+      <LocationSection />
       <FeijoadaSection />
       <LinguicaSection />
-      <MenuSection />
       <DeliverySection />
       <SundaySection />
       <LoyaltySection />
-      <LocationSection />
       <ContactSection />
-      <PartnersSection />
+      <!-- <PartnersSection /> -->
     </v-main>
     <SiteFooter />
     <a class="wa-float" :href="wa" target="_blank" rel="noopener" aria-label="Chamar no WhatsApp">
@@ -42,3 +42,4 @@ const wa = whatsappLink('Olá! Quero fazer um pedido na Parada Teixeiras.')
     </a>
   </v-app>
 </template>
+

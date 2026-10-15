@@ -7,20 +7,19 @@ import SectionHeading from './SectionHeading.vue'
   <section id="localizacao" class="band">
     <v-container>
       <SectionHeading
-        eyebrow="Onde estamos"
-        script="Vem sentar"
-        title="Na BR-120, em Teixeiras"
-        lede="Estamos na beira da BR-120. Estaciona, entra e senta como se fosse em casa."
+        script="Onde estamos?"
+        title="BR-120, em Teixeiras"
+        lede="Saída para Ponte Nova, ao lado do Posto de Gasolina Teixeiras. Passe por aqui e aproveite o melhor da Parada!"
       />
       <div class="location-layout">
         <div class="address-card">
           <span class="badge">Localização</span>
-          <h3>{{ site.addressLine }}<br />{{ site.city }}</h3>
-          <p>Comida caseira no caminho de quem passa por Teixeiras e de quem mora aqui.</p>
-          <p>
-            <v-icon icon="mdi-phone" size="18" />
+          <h3>{{ site.city }}</h3>
+          <p class="textCardLocation">Comida caseira no caminho de quem passa por Teixeiras e de quem mora aqui.</p>
+          <div class="textNumberContact">
+            <v-icon icon="mdi-whatsapp" size="25" color="green" />
             <a :href="`tel:${site.phoneTel}`">{{ site.phoneDisplay }}</a>
-          </p>
+          </div>
           <div>
             <v-btn class="btn-gold" :href="mapsLink" target="_blank" rel="noopener" elevation="0">
               <v-icon icon="mdi-map-marker" start />
@@ -40,3 +39,16 @@ import SectionHeading from './SectionHeading.vue'
     </v-container>
   </section>
 </template>
+
+<style scoped>
+.textCardLocation{
+  font-weight: bold;
+}
+.textNumberContact{
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+
+</style>

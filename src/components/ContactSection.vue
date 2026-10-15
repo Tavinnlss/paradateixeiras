@@ -44,7 +44,7 @@ function send() {
             lede="Pedido, aluguel de domingo ou uma dúvida sobre o cardápio. Chama no WhatsApp que a gente responde."
           />
           <p class="hero-copy" style="margin-top: 0">
-            <strong style="color: white">{{ site.phoneDisplay }}</strong><br />
+            <strong style="color: white"><v-icon icon="mdi-whatsapp" size="22" color="green" /> {{ site.phoneDisplay }}</strong><br />
             {{ site.addressLine }}, {{ site.city }}
           </p>
         </div>
@@ -81,10 +81,14 @@ function send() {
           <p v-if="error" class="form-error" role="alert">{{ error }}</p>
           <v-btn class="btn-gold" type="submit" elevation="0" size="large">
             <v-icon icon="mdi-whatsapp" start />
-            Enviar pelo WhatsApp
+            Enviar 
           </v-btn>
         </form>
       </div>
     </v-container>
   </section>
 </template>
+
+<style scoped>
+
+</style>

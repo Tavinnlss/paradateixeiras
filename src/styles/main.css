@@ -289,10 +289,16 @@ section {
   display: none;
   width: 44px;
   height: 44px;
-  border-radius: 50%;
-  border: 1px solid rgba(243, 199, 90, 0.5);
+  /* border-radius: 50%;
+  border: 1px solid rgba(243, 199, 90, 0.5); */
+  border: none;
   background: transparent;
-  color: var(--gold-light);
+  color: white;
+}
+
+.menu-toggle:hover {
+  color: var(--gold);
+  transition: 1s ;
 }
 
 .mobile-nav {
@@ -604,10 +610,17 @@ section {
 }
 
 .feijoada-side {
-  background: var(--cream);
-  color: var(--ink);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  min-height: 420px;
+  background:
+    linear-gradient(180deg, rgba(7, 20, 12, 0.08) 8%, rgba(7, 20, 12, 0.82) 100%),
+    url('/images/feijoada.jpg') 28% 42% / cover no-repeat;
+  color: var(--cream);
   border-radius: 28px;
   padding: 28px 24px;
+  overflow: hidden;
 }
 
 .feijoada-side strong {
@@ -616,11 +629,13 @@ section {
   font-size: 2rem;
   letter-spacing: 0.04em;
   font-weight: 400;
+  color: var(--gold-light);
 }
 
 .feijoada-side p {
   margin: 8px 0 0;
   line-height: 1.6;
+  color: var(--cream);
 }
 
 .media-copy {
@@ -646,10 +661,33 @@ section {
   display: block;
 }
 
-.photo-frame img.crop-pao {
-  object-position: 96% 62%;
-  transform: scale(2.55);
-  transform-origin: 100% 62%;
+.sunday-layout {
+  grid-template-columns: 1fr minmax(260px, 380px);
+}
+
+.sunday-layout .reel {
+  margin-inline: 0;
+  justify-self: end;
+}
+
+.reel {
+  width: min(100%, 380px);
+  margin-inline: auto;
+  aspect-ratio: 9 / 16;
+  border-radius: 28px;
+  overflow: hidden;
+  border: 3px solid var(--gold);
+  box-shadow: var(--shadow);
+  background: var(--green-950);
+  position: relative;
+}
+
+.reel iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
 }
 
 .filters {
@@ -693,7 +731,22 @@ section {
   border-color: var(--gold);
 }
 
+.dish-scroller {
+  position: relative;
+}
+
+.dish-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.dish-nav {
+  display: none;
+}
+
 .dish-media {
+  position: relative;
   height: 180px;
   overflow: hidden;
   background:
@@ -733,12 +786,89 @@ section {
 
 .dish p {
   color: #3d4a40;
-  flex: 1;
 }
 
-.dish .badge {
-  align-self: flex-start;
-  margin: 4px 0 0;
+.dish-badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  z-index: 2;
+  margin: 0;
+}
+
+.dish-wa {
+  margin-top: auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 42px;
+  padding: 0 14px;
+  border-radius: 999px;
+  background: #25d366;
+  color: #fff;
+  font-size: 0.88rem;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.dish-wa:hover {
+  color: #fff;
+  filter: brightness(1.06);
+  transform: translateY(-1px);
+}
+
+@media (max-width: 1279px) {
+  .dish-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 700px) {
+  .dish-grid {
+    display: flex;
+    gap: 14px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-padding-inline: 2px;
+    padding-bottom: 6px;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior-x: contain;
+    scrollbar-width: none;
+  }
+
+  .dish-grid::-webkit-scrollbar {
+    display: none;
+  }
+
+  .dish-grid .dish {
+    flex: 0 0 86%;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+  }
+
+  .dish-grid .dish-wa {
+    width: 100%;
+  }
+
+  .dish-nav {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 14px;
+  }
+
+  .dish-nav button {
+    width: 44px;
+    height: 44px;
+    border: 0;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    background: var(--gold);
+    color: var(--ink);
+    cursor: pointer;
+  }
 }
 
 .delivery-layout {
@@ -787,8 +917,7 @@ section {
   border-radius: 50%;
   display: grid;
   place-items: center;
-  background: var(--white);
-  color: var(--green-800);
+  color: green;
 }
 
 .mascot-frame {
@@ -807,9 +936,10 @@ section {
 }
 
 .loyalty-layout {
-  display: grid;
-  grid-template-columns: 0.9fr 1.1fr;
-  gap: 28px;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  gap: 40px;
   align-items: center;
 }
 
@@ -820,6 +950,8 @@ section {
   overflow: hidden;
   box-shadow: var(--shadow);
   border: 3px solid var(--gold);
+  max-width: 600px;
+  width: 100%;
 }
 
 .stamp-head {
@@ -908,11 +1040,15 @@ section {
 .address-card {
   border-radius: 28px;
   padding: 28px;
-  background: var(--cream);
-  color: var(--ink);
+  background:
+    linear-gradient(180deg, rgba(7, 20, 12, 0.78) 0%, rgba(7, 20, 12, 0.52) 46%, rgba(7, 20, 12, 0.74) 100%),
+    url('/images/paradafoto.png') center 38% / cover no-repeat;
+  color: var(--cream);
   display: flex;
   flex-direction: column;
   gap: 12px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
 }
 
 .address-card h3 {
@@ -930,8 +1066,12 @@ section {
 }
 
 .address-card a {
-  color: var(--green-700);
+  color: var(--gold-light);
   font-weight: 800;
+}
+
+.address-card > div:last-child {
+  margin-top: auto;
 }
 
 .map-frame {
@@ -1012,9 +1152,9 @@ section {
 }
 
 .footer-grid {
-  display: grid;
-  grid-template-columns: 1.3fr 0.8fr 0.9fr;
-  gap: 28px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .footer-brand {
@@ -1154,6 +1294,16 @@ section {
   .photo-frame img {
     height: 280px;
   }
+  .loyalty-layout{
+    flex-direction: column;
+  }
+
+  .footer-grid{
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+  }
+
 }
 
 @media (max-width: 640px) {
@@ -1174,4 +1324,7 @@ section {
   .legal {
     flex-direction: column;
   }
+
+  
+
 }

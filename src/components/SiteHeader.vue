@@ -25,7 +25,7 @@ const wa = whatsappLink('Olá! Quero fazer um pedido na Parada Teixeiras.')
 
       <v-btn class="btn-gold header-cta" :href="wa" target="_blank" rel="noopener" elevation="0">
         <v-icon icon="mdi-whatsapp" start />
-        {{ site.phoneDisplay }}
+        Fale Conosco
       </v-btn>
 
       <button class="menu-toggle" type="button" :aria-expanded="open" aria-label="Abrir menu" @click="open = !open">
@@ -41,3 +41,10 @@ const wa = whatsappLink('Olá! Quero fazer um pedido na Parada Teixeiras.')
     </v-btn>
   </nav>
 </template>
+
+<style scoped>
+.header-inner{
+  max-width: 1400px;
+  width: 100%;
+}
+</style>

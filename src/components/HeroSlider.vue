@@ -1,28 +1,28 @@
 <script setup>
-import { onMounted, onUnmounted, ref } from 'vue'
-import { site, slides, whatsappLink } from '../data/site'
+import { onMounted, onUnmounted, ref } from "vue";
+import { site, slides, whatsappLink } from "../data/site";
 
-const current = ref(0)
-const height = ref(520)
-const wa = whatsappLink('Olá! Quero fazer um pedido na Parada Teixeiras.')
+const current = ref(0);
+const height = ref(520);
+const wa = whatsappLink("Olá! Quero fazer um pedido na Parada Teixeiras.");
 
 function resize() {
-  const width = window.innerWidth
+  const width = window.innerWidth;
   if (width < 700) {
-    height.value = Math.min(width - 36, 460)
+    height.value = Math.min(width - 36, 460);
   } else {
-    height.value = 520
+    height.value = 520;
   }
 }
 
 onMounted(() => {
-  resize()
-  window.addEventListener('resize', resize)
-})
+  resize();
+  window.addEventListener("resize", resize);
+});
 
 onUnmounted(() => {
-  window.removeEventListener('resize', resize)
-})
+  window.removeEventListener("resize", resize);
+});
 </script>
 
 <template>
@@ -36,23 +36,28 @@ onUnmounted(() => {
             <span class="white">Merece</span>
             <span class="gold">o melhor</span>
           </h1>
-          <p class="hero-copy">{{ site.tagline }}. {{ site.about }}</p>
+          <p class="hero-copy">
+            Aqui no <span class="textFocousFirst">Parada Teixeiras</span>, cada prato é preparado com
+            <span class="textFocus">ingredientes frescos </span>, <span class="textFocus">receitas tradicionais</span> e aquele
+            <span class="textFocus">sabor que lembra casa</span>.
+          </p>
           <div class="hero-actions">
-            <v-btn class="btn-gold" href="#cardapio" elevation="0" size="large">Ver o cardápio</v-btn>
-            <v-btn class="btn-ghost" :href="wa" target="_blank" rel="noopener" elevation="0" size="large">
-              <v-icon icon="mdi-whatsapp" start />
-              Chamar no WhatsApp
-            </v-btn>
+            <v-btn class="btn-gold" href="#cardapio" elevation="0" size="large"
+              >Ver o cardápio</v-btn
+            >
+            <!-- <v-btn class="btn-ghost" href="#localizacao" >
+              Calcular rota
+            </v-btn> -->
           </div>
           <div class="hero-meta">
-            <span>
+            <!-- <span>
               <v-icon icon="mdi-map-marker" color="secondary" size="18" />
               {{ site.addressLine }}, {{ site.city }}
-            </span>
-            <span>
+            </span> -->
+            <!-- <span>
               <v-icon icon="mdi-moped" color="secondary" size="18" />
               Delivery {{ site.deliveryHours.toLowerCase() }}
-            </span>
+            </span> -->
           </div>
         </div>
 
@@ -81,11 +86,27 @@ onUnmounted(() => {
     </v-container>
   </section>
 
-  <div class="phrase-ribbon" aria-hidden="true">
+  <!-- <div class="phrase-ribbon" aria-hidden="true">
     <div class="phrase-track">
       <span v-for="n in 2" :key="n">
-        COMIDA CASEIRA · ATENDIMENTO FAMILIAR · FEITA NA HORA · PRATO FEITO TODO DIA · MARMITEX · PARADA TEIXEIRAS ·
+        COMIDA CASEIRA · ATENDIMENTO FAMILIAR · FEITA NA HORA · PRATO FEITO TODO
+        DIA · MARMITEX · PARADA TEIXEIRAS ·
       </span>
     </div>
-  </div>
+  </div> -->
 </template>
+
+
+<style scoped>
+.textFocousFirst{
+  font-weight: bold;
+}
+.textFocus{
+  color: var(--gold);
+  font-weight: bold;
+}
+
+.hero{
+  border-bottom: 0.5px solid var(--gold);
+}
+</style>

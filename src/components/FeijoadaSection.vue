@@ -1,5 +1,5 @@
 <script setup>
-import SectionHeading from './SectionHeading.vue'
+import SectionHeading from "./SectionHeading.vue";
 </script>
 
 <template>
@@ -15,22 +15,25 @@ import SectionHeading from './SectionHeading.vue'
           />
           <p class="mega">Feijoada</p>
           <p class="hero-copy">
-            O prato mais vendido do almoço é a feijoada. É ela que a casa mais serve quando o sol está alto:
-            comida caseira, panela caprichada e o ponto que a freguesia de Teixeiras já conhece.
+            A estrela do nosso almoço é a feijoada! Preparada com carinho,
+            ingredientes selecionados e aquele tempero caseiro que conquista a
+            cada garfada. Um sabor especial que já é tradição e conquista o
+            paladar de Teixeiras.
           </p>
-          <div class="hero-actions">
-            <v-btn class="btn-gold" href="#cardapio" elevation="0">Ver no cardápio</v-btn>
-          </div>
+          <!-- <div class="hero-actions">
+            <v-btn class="btn-gold" href="#cardapio" elevation="0"
+              >Ver no cardápio</v-btn
+            >
+          </div> -->
         </div>
-        <aside class="feijoada-side">
-          <span class="badge">Mais vendido</span>
-          <strong>Feijoada da casa</strong>
-          <p>
-            Sai no almoço, junto com o prato feito, a tilápia e a marmitex. Se for para escolher um só,
-            a mesa escolhe a feijoada.
-          </p>
-        </aside>
+        <aside class="feijoada-side"></aside>
       </div>
     </v-container>
   </section>
 </template>
+
+<style scoped>
+.feijoada-side {
+  border: 1px solid var(--gold);
+}
+</style>

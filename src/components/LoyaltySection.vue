@@ -7,7 +7,6 @@ import SectionHeading from './SectionHeading.vue'
   <section id="fidelidade" class="band band-alt">
     <v-container>
       <SectionHeading
-        :eyebrow="loyalty.provisional ? 'Texto provisório' : 'Programa da casa'"
         :script="loyalty.script"
         :title="loyalty.title"
         :lede="loyalty.intro"

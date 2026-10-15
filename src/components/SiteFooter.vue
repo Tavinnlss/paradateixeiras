@@ -20,17 +20,7 @@ const wa = whatsappLink('Olá! Quero falar com a Parada Teixeiras.')
           </div>
           <p>{{ site.tagline }}.</p>
         </div>
-        <div>
-          <h3>Visite</h3>
-          <ul>
-            <li>{{ site.addressLine }}</li>
-            <li>{{ site.city }}</li>
-            <li>
-              <a :href="`tel:${site.phoneTel}`">{{ site.phoneDisplay }}</a>
-            </li>
-            <li>Delivery: {{ site.deliveryHours }}</li>
-          </ul>
-        </div>
+        
         <div>
           <h3>Redes</h3>
           <div class="social-row">
@@ -41,13 +31,21 @@ const wa = whatsappLink('Olá! Quero falar com a Parada Teixeiras.')
               <v-icon icon="mdi-whatsapp" size="24" />
             </a>
           </div>
-          <p style="margin-top: 12px">{{ site.instagramHandle }}</p>
+        </div>
+        <div class="logoParceiros">
+          <h3>Parceiros</h3>
+          <img src="/images/solENeve.png" alt="">
         </div>
       </div>
       <div class="legal">
         <span>© {{ new Date().getFullYear() }} Parada Teixeiras. Comida caseira em Teixeiras - MG.</span>
-        <span>Aos domingos o restaurante fecha. O salão pode ser alugado.</span>
       </div>
     </v-container>
   </footer>
 </template>
+
+<style scoped>
+.logoParceiros img{
+  width: 100px;
+}
+</style>
