@@ -15,7 +15,7 @@ import SectionHeading from './SectionHeading.vue'
         <article class="stamp-card" aria-label="Modelo do cartão fidelidade">
           <div class="stamp-head">
             <span class="brand-logo">
-              <img src="/images/logo.png" alt="" />
+              <img src="/images/logoparadatexas.jpg" alt="" />
             </span>
             <div>
               <strong>Cartão fidelidade</strong>

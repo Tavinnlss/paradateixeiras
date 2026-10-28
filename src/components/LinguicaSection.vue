@@ -24,11 +24,12 @@ const wa = whatsappLink(
             title="O pão com linguiça mais famoso de Teixeiras"
           />
           <p class="hero-copy" style="margin-top: 0">
-            Pão macio, linguiça suculenta e queijo derretido na medida certa. Um
-            lanche irresistível, famoso em Teixeiras e que sempre dá vontade de
-            pedir de novo!
+            Pão quentinho, queijo derretido e o sabor marcante de um clássico
+            que conquistou Teixeiras. Nosso pão com linguiça é a escolha certa
+            para quem busca um lanche saboroso e quer sempre repetir a
+            experiência!
           </p>
-          <div class="hero-actions">
+          <!-- <div class="hero-actions">
             <v-btn
               class="btn-gold"
               :href="wa"
@@ -38,7 +39,7 @@ const wa = whatsappLink(
             >
               Eu quero!
             </v-btn>
-          </div>
+          </div> -->
         </div>
       </div>
     </v-container>

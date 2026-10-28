@@ -21,8 +21,8 @@ function send() {
   const mensagem = form.mensagem.trim().replace(/[.!?]+$/, '')
   const text = [
     `Olá, Parada Teixeiras! Meu nome é ${form.nome.trim()}.`,
-    `${mensagem}.`,
-    form.telefone.trim() ? `Meu telefone: ${form.telefone.trim()}.` : '',
+    `${mensagem}.`
+    // form.telefone.trim() ? `Meu telefone: ${form.telefone.trim()}.` : '',
   ]
     .filter(Boolean)
     .join(' ')
@@ -59,7 +59,7 @@ function send() {
               hide-details
               autocomplete="name"
             />
-            <v-text-field
+            <!-- <v-text-field
               v-model="form.telefone"
               label="Telefone"
               variant="solo"
@@ -67,7 +67,7 @@ function send() {
               hide-details
               autocomplete="tel"
               style="margin-top: 12px"
-            />
+            /> -->
             <v-textarea
               v-model="form.mensagem"
               label="Mensagem"

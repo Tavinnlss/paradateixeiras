@@ -10,9 +10,10 @@ import MenuSection from './components/MenuSection.vue'
 import DeliverySection from './components/DeliverySection.vue'
 import SundaySection from './components/SundaySection.vue'
 import LoyaltySection from './components/LoyaltySection.vue'
+import ReviewsSection from './components/ReviewsSection.vue'
+import PickupSection from './components/PickupSection.vue'
 import LocationSection from './components/LocationSection.vue'
 import ContactSection from './components/ContactSection.vue'
-import PartnersSection from './components/PartnersSection.vue'
 import SiteFooter from './components/SiteFooter.vue'
 
 const wa = whatsappLink('Olá! Quero fazer um pedido na Parada Teixeiras.')
@@ -27,14 +28,15 @@ const wa = whatsappLink('Olá! Quero fazer um pedido na Parada Teixeiras.')
       <HighlightsBar />
       <MenuSection />
       <DayNightSection />
+      <PickupSection />
       <LocationSection />
       <FeijoadaSection />
       <LinguicaSection />
-      <DeliverySection />
+      <!-- <DeliverySection /> -->
       <SundaySection />
       <LoyaltySection />
+      <ReviewsSection />
       <ContactSection />
-      <!-- <PartnersSection /> -->
     </v-main>
     <SiteFooter />
     <a class="wa-float" :href="wa" target="_blank" rel="noopener" aria-label="Chamar no WhatsApp">
