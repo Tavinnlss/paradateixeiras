@@ -31,9 +31,9 @@ onUnmounted(() => {
       <div class="hero-grid">
         <div>
           <p class="hero-kicker">{{ site.phrase }} · desde {{ site.since }}</p>
-          <p class="hero-script">Seu almoço</p>
+          <p class="hero-script">Seu almoço e janta</p><br>
           <h1 class="hero-title">
-            <span class="white">Merece</span>
+            <span class="white">Merecem</span>
             <span class="gold">o melhor</span>
           </h1>
           <p class="hero-copy">

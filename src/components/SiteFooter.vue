@@ -1,7 +1,7 @@
 <script setup>
-import { site, whatsappLink } from '../data/site'
+import { site, whatsappLink } from "../data/site";
 
-const wa = whatsappLink('Olá! Quero falar com a Parada Teixeiras.')
+const wa = whatsappLink("Olá! Quero falar com a Parada Teixeiras.");
 </script>
 
 <template>
@@ -11,7 +11,10 @@ const wa = whatsappLink('Olá! Quero falar com a Parada Teixeiras.')
         <div>
           <div class="footer-brand">
             <span class="brand-logo">
-              <img src="/images/logoparadatexas.jpg" alt="Logo Parada Teixeiras" />
+              <img
+                src="/images/logoparadatexas.jpg"
+                alt="Logo Parada Teixeiras"
+              />
             </span>
             <div>
               <strong>PARADA TEIXEIRAS</strong>
@@ -20,32 +23,54 @@ const wa = whatsappLink('Olá! Quero falar com a Parada Teixeiras.')
           </div>
           <p>{{ site.tagline }}.</p>
         </div>
-        
+
         <div>
           <h3>Redes</h3>
           <div class="social-row">
-            <a :href="site.instagramUrl" target="_blank" rel="noopener" :aria-label="`Instagram ${site.instagramHandle}`">
+            <a
+              :href="site.instagramUrl"
+              target="_blank"
+              rel="noopener"
+              :aria-label="`Instagram ${site.instagramHandle}`"
+            >
               <v-icon icon="mdi-instagram" size="24" />
             </a>
-            <a :href="wa" target="_blank" rel="noopener" aria-label="WhatsApp da Parada Teixeiras">
+            <a
+              :href="wa"
+              target="_blank"
+              rel="noopener"
+              aria-label="WhatsApp da Parada Teixeiras"
+            >
               <v-icon icon="mdi-whatsapp" size="24" />
             </a>
           </div>
         </div>
         <div class="logoParceiros">
           <h3>Parceiros</h3>
-          <img src="/images/solENeve.png" alt="">
+          <div class="container-parceiros">
+            <img src="/images/solENeve.png" alt="" />
+            <img src="/images/icedrink0002.png" alt="" />
+            <img src="/images/padariabranco.png" alt="" />
+          </div>
         </div>
       </div>
       <div class="legal">
-        <span>© {{ new Date().getFullYear() }} Parada Teixeiras. Comida caseira em Teixeiras - MG.</span>
+        <span
+          >© {{ new Date().getFullYear() }} Parada Teixeiras. Comida caseira em
+          Teixeiras - MG.</span
+        >
       </div>
     </v-container>
   </footer>
 </template>
 
 <style scoped>
-.logoParceiros img{
+.container-parceiros {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.container-parceiros img {
   width: 100px;
 }
 </style>

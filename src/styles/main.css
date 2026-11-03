@@ -732,6 +732,32 @@ section {
   border-color: var(--gold);
 }
 
+.dish.is-unavailable .dish-media,
+.dish.is-unavailable .dish-tag,
+.dish.is-unavailable h3,
+.dish.is-unavailable .dish-body > p:not(.dish-off) {
+  filter: grayscale(1);
+  opacity: 0.45;
+}
+
+.dish p.dish-off {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 42px;
+  padding: 0 14px;
+  border-radius: 999px;
+  background: #6d756f;
+  color: #fff;
+  font-size: 0.88rem;
+  font-weight: 800;
+  line-height: 1.2;
+  text-align: center;
+  -webkit-line-clamp: unset;
+  overflow: visible;
+}
+
 .dish-scroller {
   position: relative;
 }
@@ -740,6 +766,20 @@ section {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 18px;
+}
+
+.night-group + .night-group {
+  margin-top: 46px;
+}
+
+.night-label {
+  margin: 0 0 16px;
+  text-align: center;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: clamp(1.7rem, 2.6vw, 2.2rem);
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  color: var(--gold-light);
 }
 
 .dish-nav {
@@ -815,7 +855,7 @@ section {
   min-height: 42px;
   padding: 0 14px;
   border-radius: 999px;
-  background: #25d366;
+  background: var(--gold);
   color: #fff;
   font-size: 0.88rem;
   font-weight: 800;
@@ -1066,6 +1106,12 @@ section {
     padding: 0 10px;
     font-size: 0.76rem;
     white-space: nowrap;
+  }
+
+  .dish p.dish-off {
+    min-height: 36px;
+    padding: 0 10px;
+    font-size: 0.76rem;
   }
 
   .dish-grid .dish-wa {

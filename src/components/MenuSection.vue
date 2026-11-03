@@ -31,15 +31,13 @@ function todayLunchId() {
 
 const dayId = ref(todayLunchId());
 const lunchOpen = ref(false);
-const portionsOpen = ref(false);
+const nightOpen = ref({ lanches: false, porcoes: false });
 const isPhone = ref(window.matchMedia(PHONE_QUERY).matches);
 const dayTabs = ref(null);
 const lunchTrack = ref(null);
-const portionTrack = ref(null);
-const fromEdge = ref(0);
+const nightTracks = {};
 
 let phoneMedia;
-let gesture = null;
 
 const day = computed(
   () => lunchDays.find((item) => item.id === dayId.value) || lunchDays[0],
@@ -62,16 +60,42 @@ const visibleLunches = computed(() => {
   return lunchEntries.value.slice(0, CARD_LIMIT);
 });
 
-const visiblePortions = computed(() => {
-  if (isPhone.value || portionsOpen.value) return portions;
-  return portions.slice(0, CARD_LIMIT);
+const nightGroups = computed(() => {
+  const groups = [
+    {
+      id: "lanches",
+      title: "Lanches",
+      aria: "Lanches",
+      prev: "Lanche anterior",
+      next: "Próximo lanche",
+      items: portions.filter((item) => item.tag === "Lanche"),
+    },
+    {
+      id: "porcoes",
+      title: "Porções",
+      aria: "Porções",
+      prev: "Porção anterior",
+      next: "Próxima porção",
+      items: portions.filter((item) => item.tag !== "Lanche"),
+    },
+  ];
+
+  return groups.map((group) => {
+    const open = nightOpen.value[group.id];
+    return {
+      ...group,
+      open,
+      visible:
+        isPhone.value || open
+          ? group.items
+          : group.items.slice(0, CARD_LIMIT),
+      hasMore: !isPhone.value && group.items.length > CARD_LIMIT,
+    };
+  });
 });
 
 const lunchHasMore = computed(
   () => !isPhone.value && lunchEntries.value.length > CARD_LIMIT,
-);
-const portionsHasMore = computed(
-  () => !isPhone.value && portions.length > CARD_LIMIT,
 );
 
 function orderLink(item) {
@@ -85,15 +109,7 @@ function askLink(current) {
 }
 
 function selectDay(id) {
-  fromEdge.value = 0;
   dayId.value = id;
-}
-
-function stepDay(direction) {
-  const index = lunchDays.findIndex((item) => item.id === dayId.value);
-  const next = (index + direction + lunchDays.length) % lunchDays.length;
-  fromEdge.value = direction;
-  dayId.value = lunchDays[next].id;
 }
 
 function edges(el) {
@@ -105,58 +121,38 @@ function edges(el) {
 }
 
 function scrollTrack(el, direction) {
-  if (!el) return "missing";
+  if (!el) return;
   const edge = edges(el);
-  if (direction < 0 && edge.start) return "edge";
-  if (direction > 0 && edge.end) return "edge";
+  if (direction < 0 && edge.start) return;
+  if (direction > 0 && edge.end) return;
   const card = el.querySelector(".dish");
   const amount = (card?.offsetWidth || el.clientWidth * 0.86) + 14;
   el.scrollBy({ left: direction * amount, behavior: "smooth" });
-  return "scrolled";
 }
 
 function scrollLunches(direction) {
-  const result = scrollTrack(lunchTrack.value, direction);
-  if (result === "edge" && isPhone.value) stepDay(direction);
+  scrollTrack(lunchTrack.value, direction);
 }
 
-function scrollPortions(direction) {
-  scrollTrack(portionTrack.value, direction);
+function setNightTrack(id, el) {
+  if (el) nightTracks[id] = el;
 }
 
-function onLunchTouchStart(event) {
-  const el = lunchTrack.value;
-  if (!el) return;
-  const edge = edges(el);
-  const touch = event.changedTouches[0];
-  gesture = {
-    x: touch.clientX,
-    y: touch.clientY,
-    start: edge.start,
-    end: edge.end,
+function scrollNight(id, direction) {
+  scrollTrack(nightTracks[id], direction);
+}
+
+function toggleNight(id) {
+  nightOpen.value = {
+    ...nightOpen.value,
+    [id]: !nightOpen.value[id],
   };
-}
-
-function onLunchTouchEnd(event) {
-  if (!gesture || !isPhone.value) return;
-  const touch = event.changedTouches[0];
-  const dx = touch.clientX - gesture.x;
-  const dy = touch.clientY - gesture.y;
-  const snapshot = gesture;
-  gesture = null;
-  if (Math.abs(dx) < 56 || Math.abs(dx) < Math.abs(dy)) return;
-  if (dx < 0 && snapshot.end) stepDay(1);
-  else if (dx > 0 && snapshot.start) stepDay(-1);
 }
 
 async function alignTrack() {
   await nextTick();
   const el = lunchTrack.value;
-  const edge = fromEdge.value;
-  fromEdge.value = 0;
-  if (el) {
-    el.scrollLeft = edge < 0 ? el.scrollWidth : 0;
-  }
+  if (el) el.scrollLeft = 0;
   const scroller = dayTabs.value;
   const tab = scroller?.querySelector(".is-on");
   if (!scroller || !tab) return;
@@ -194,7 +190,7 @@ onBeforeUnmount(() => {
         <SectionHeading
           eyebrow="Cardápio"
           script="Escolha seu favorito"
-          title="NOSSOS PRATOS"
+          title="Almoço e Janta"
         />
         <p class="price-seal">
           <span>Pratos</span>
@@ -209,8 +205,8 @@ onBeforeUnmount(() => {
           <h3 class="display">PRATOS DO DIA</h3>
         </header> -->
         <p class="menu-note">
-          Segunda, quarta, sexta e sábado seguem com pratos fixos. Na terça e na
-          quinta, duas opções mudam.
+          Segunda, sexta e sábado seguem com pratos fixos. Na terça, quarta e na
+          quinta-feira, duas opções mudam.
         </p>
 
         <div
@@ -242,8 +238,6 @@ onBeforeUnmount(() => {
             role="tabpanel"
             :aria-label="day.full"
             tabindex="0"
-            @touchstart.passive="onLunchTouchStart"
-            @touchend="onLunchTouchEnd"
           >
             <template v-for="entry in visibleLunches" :key="entry.id">
               <article v-if="entry.type === 'ask'" class="dish dish-ask">
@@ -251,11 +245,11 @@ onBeforeUnmount(() => {
                   <v-icon icon="mdi-calendar-question" size="46" />
                 </div>
                 <div class="dish-body">
-                  <span class="dish-tag">Terças e Quintas</span>
+                  <span class="dish-tag">Terças, quartas e quintas</span>
                   <h3>Pratos especiais do dia</h3>
                   <p>
                     Além das opções fixas do cardápio, temos dois pratos
-                    especiais que variam a cada terça e quinta-feira.
+                    especiais que variam a cada terça, quarta e quinta-feira.
                   </p>
                   <a
                     class="dish-wa"
@@ -273,7 +267,11 @@ onBeforeUnmount(() => {
               <article
                 v-else
                 class="dish"
-                :class="{ 'is-featured': entry.item.featured }"
+                :class="{
+                  'is-featured': entry.item.featured && !entry.item.unavailable,
+                  'is-unavailable': entry.item.unavailable,
+                }"
+                :aria-disabled="entry.item.unavailable || undefined"
               >
                 <div class="dish-media">
                   <img
@@ -295,14 +293,17 @@ onBeforeUnmount(() => {
                   <span class="dish-tag">{{ entry.item.tag }}</span>
                   <h3>{{ entry.item.name }}</h3>
                   <p>{{ entry.item.description }}</p>
+                  <p v-if="entry.item.unavailable" class="dish-off">
+                    Prato indisponível
+                  </p>
                   <a
+                    v-else
                     class="dish-wa"
                     :href="orderLink(entry.item)"
                     target="_blank"
                     rel="noopener"
                     :aria-label="`Pedir ${entry.item.name} pelo WhatsApp`"
                   >
-                    <v-icon icon="mdi-whatsapp" size="18" />
                     Quero este prato
                   </a>
                 </div>
@@ -313,22 +314,20 @@ onBeforeUnmount(() => {
           <div class="dish-nav">
             <button
               type="button"
-              aria-label="Dia ou prato anterior"
+              aria-label="Prato anterior"
               @click="scrollLunches(-1)"
             >
               <v-icon icon="mdi-chevron-left" />
             </button>
             <button
               type="button"
-              aria-label="Próximo dia ou prato"
+              aria-label="Próximo prato"
               @click="scrollLunches(1)"
             >
               <v-icon icon="mdi-chevron-right" />
             </button>
           </div>
-          <p class="day-hint">
-            Deslize os pratos. No final, passa para o próximo dia.
-          </p>
+          <p class="day-hint">Deslize para ver os pratos deste dia.</p>
         </div>
 
         <button
@@ -348,90 +347,93 @@ onBeforeUnmount(() => {
       <div id="porcoes" class="menu-block">
         <header class="menu-kicker">
           <p class="script">Para a mesa</p>
-          <h3 class="display">PORÇÕES E LANCHES</h3>
+          <h3 class="display">PORÇÕES e Lanches</h3>
         </header>
         <p class="menu-note">
           Porções, lanches e outras opções da casa, sem mudar conforme o dia.
         </p>
 
-        <div class="dish-scroller">
-          <div
-            ref="portionTrack"
-            class="dish-grid"
-            role="region"
-            aria-label="Porções e lanches"
-            tabindex="0"
+        <div v-for="group in nightGroups" :key="group.id" class="night-group">
+          <h4 class="night-label">{{ group.title }}</h4>
+
+          <div class="dish-scroller">
+            <div
+              :ref="(el) => setNightTrack(group.id, el)"
+              class="dish-grid"
+              role="region"
+              :aria-label="group.aria"
+              tabindex="0"
+            >
+              <article
+                v-for="(item, index) in group.visible"
+                :key="`${item.id}-${index}`"
+                class="dish"
+                :class="{ 'is-featured': item.featured }"
+              >
+                <div class="dish-media">
+                  <img
+                    v-if="item.image"
+                    :src="item.image"
+                    :alt="item.name"
+                    :style="{
+                      objectPosition: item.imagePosition,
+                      transform: `scale(${item.zoom || 1})`,
+                      transformOrigin: item.imagePosition,
+                    }"
+                  />
+                  <v-icon v-else :icon="item.icon" size="46" />
+                  <span v-if="item.badge" class="badge dish-badge">{{
+                    item.badge
+                  }}</span>
+                </div>
+                <div class="dish-body">
+                  <span class="dish-tag">{{ item.tag }}</span>
+                  <h3>{{ item.name }}</h3>
+                  <p>{{ item.description }}</p>
+                  <a
+                    class="dish-wa"
+                    :href="orderLink(item)"
+                    target="_blank"
+                    rel="noopener"
+                    :aria-label="`Pedir ${item.name} pelo WhatsApp`"
+                  >
+                    Quero este prato
+                  </a>
+                </div>
+              </article>
+            </div>
+
+            <div class="dish-nav">
+              <button
+                type="button"
+                :aria-label="group.prev"
+                @click="scrollNight(group.id, -1)"
+              >
+                <v-icon icon="mdi-chevron-left" />
+              </button>
+              <button
+                type="button"
+                :aria-label="group.next"
+                @click="scrollNight(group.id, 1)"
+              >
+                <v-icon icon="mdi-chevron-right" />
+              </button>
+            </div>
+          </div>
+
+          <button
+            v-if="group.hasMore"
+            class="see-more"
+            type="button"
+            @click="toggleNight(group.id)"
           >
-            <article
-              v-for="item in visiblePortions"
-              :key="item.id"
-              class="dish"
-              :class="{ 'is-featured': item.featured }"
-            >
-              <div class="dish-media">
-                <img
-                  v-if="item.image"
-                  :src="item.image"
-                  :alt="item.name"
-                  :style="{
-                    objectPosition: item.imagePosition,
-                    transform: `scale(${item.zoom || 1})`,
-                    transformOrigin: item.imagePosition,
-                  }"
-                />
-                <v-icon v-else :icon="item.icon" size="46" />
-                <span v-if="item.badge" class="badge dish-badge">{{
-                  item.badge
-                }}</span>
-              </div>
-              <div class="dish-body">
-                <span class="dish-tag">{{ item.tag }}</span>
-                <h3>{{ item.name }}</h3>
-                <p>{{ item.description }}</p>
-                <a
-                  class="dish-wa"
-                  :href="orderLink(item)"
-                  target="_blank"
-                  rel="noopener"
-                  :aria-label="`Pedir ${item.name} pelo WhatsApp`"
-                >
-                  <v-icon icon="mdi-whatsapp" size="18" />
-                  Quero este prato
-                </a>
-              </div>
-            </article>
-          </div>
-
-          <div class="dish-nav">
-            <button
-              type="button"
-              aria-label="Porção anterior"
-              @click="scrollPortions(-1)"
-            >
-              <v-icon icon="mdi-chevron-left" />
-            </button>
-            <button
-              type="button"
-              aria-label="Próxima porção"
-              @click="scrollPortions(1)"
-            >
-              <v-icon icon="mdi-chevron-right" />
-            </button>
-          </div>
+            {{ group.open ? "Ver menos" : "Ver mais" }}
+            <v-icon
+              :icon="group.open ? 'mdi-chevron-up' : 'mdi-chevron-down'"
+              size="18"
+            />
+          </button>
         </div>
-
-        <button
-          v-if="portionsHasMore"
-          class="see-more"
-          type="button"
-          @click="portionsOpen = !portionsOpen"
-        >
-          {{ portionsOpen ? "Ver menos" : "Ver mais" }}
-          <v-icon
-            :icon="portionsOpen ? 'mdi-chevron-up' : 'mdi-chevron-down'"
-            size="18"
-          />
-        </button>
       </div>
     </v-container>
   </section>
