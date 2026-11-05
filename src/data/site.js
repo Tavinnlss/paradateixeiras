@@ -1138,7 +1138,12 @@ export const portions = [
     image: "",
   }),
 
-  plate("pernilfritas", "Pernil com fritas ou mandioca", "400g", {
+  plate("pernilfritas", "Pernil com fritas", "400g", {
+    tag: "Porção",
+    icon: "mdi-food-steak",
+    image: "",
+  }),
+  plate("pernilmandioca", "Pernil com mandioca", "400g", {
     tag: "Porção",
     icon: "mdi-food-steak",
     image: "",
@@ -1152,7 +1157,7 @@ export const portions = [
   plate("filetilapia", "Filé de tilápia", "500g", {
     tag: "Porção",
     icon: "mdi-food-steak",
-    image:"/images/cardapio/porcao/porcaotilapia.png",
+    image: "/images/cardapio/porcao/porcaotilapia.png",
   }),
 
   plate(
@@ -1199,26 +1204,16 @@ export const portions = [
       badge: "Mais vendido",
     },
   ),
-  plate(
-    "omelete",
-    "Omelete",
-    "2 ovos e queijo",
-    {
-      tag: "Lanche",
-      icon: "mdi-egg",
-      //image: "/images/cardapio/porcao/xtudo.png",
-    },
-  ),
-  plate(
-    "mistosimples",
-    "Misto quente simples",
-    "Pão, presunto e queijo",
-    {
-      tag: "Lanche",
-      icon: "mdi-hamburger",
-      //image: "/images/cardapio/porcao/xtudo.png",
-    },
-  ),
+  plate("omelete", "Omelete", "2 ovos e queijo", {
+    tag: "Lanche",
+    icon: "mdi-egg",
+    //image: "/images/cardapio/porcao/xtudo.png",
+  }),
+  plate("mistosimples", "Misto quente simples", "Pão, presunto e queijo", {
+    tag: "Lanche",
+    icon: "mdi-hamburger",
+    //image: "/images/cardapio/porcao/xtudo.png",
+  }),
   plate(
     "mistocompleto",
     "Misto quente completo",
