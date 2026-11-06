@@ -1050,7 +1050,7 @@ export const lunches = {
       "Tropeiro Completo",
       "Arroz, torresmo, bife suíno, ovo, fritas e couve.",
       {
-        badge: "Mais vendido",
+        badge: "Mais vendid",
         featured: true,
         tag: "Todos os dias",
         image: "/images/cardapio/almoco/segunda/tropeirosuino.png",
