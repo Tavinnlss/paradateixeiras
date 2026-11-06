@@ -1,5 +1,4 @@
 <script setup>
-import { whatsappLink } from './data/site'
 import SiteHeader from './components/SiteHeader.vue'
 import HeroSlider from './components/HeroSlider.vue'
 import HighlightsBar from './components/HighlightsBar.vue'
@@ -15,8 +14,7 @@ import PickupSection from './components/PickupSection.vue'
 import LocationSection from './components/LocationSection.vue'
 import ContactSection from './components/ContactSection.vue'
 import SiteFooter from './components/SiteFooter.vue'
-
-const wa = whatsappLink('Olá! Quero fazer um pedido na Parada Teixeiras.')
+import HostMascot from './components/HostMascot.vue'
 </script>
 
 <template>
@@ -39,9 +37,7 @@ const wa = whatsappLink('Olá! Quero fazer um pedido na Parada Teixeiras.')
       <ContactSection />
     </v-main>
     <SiteFooter />
-    <a class="wa-float" :href="wa" target="_blank" rel="noopener" aria-label="Chamar no WhatsApp">
-      <v-icon icon="mdi-whatsapp" size="30" />
-    </a>
+    <HostMascot />
   </v-app>
 </template>
 
