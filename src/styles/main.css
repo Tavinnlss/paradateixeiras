@@ -616,7 +616,7 @@ section {
   min-height: 420px;
   background:
     linear-gradient(180deg, rgba(7, 20, 12, 0.08) 8%, rgba(7, 20, 12, 0.70) 100%),
-    url('/images/cardapio/almoco/quarta/feijoadaparada.png') 28% 42% / cover no-repeat;
+    url('/images/IMG/feijoadaparada.png') 28% 42% / cover no-repeat;
   color: var(--cream);
   border-radius: 28px;
   padding: 28px 24px;
@@ -1437,7 +1437,7 @@ section {
   padding: 28px;
   background:
     linear-gradient(180deg, rgba(7, 20, 12, 0.78) 0%, rgba(7, 20, 12, 0.52) 46%, rgba(7, 20, 12, 0.74) 100%),
-    url('/images/paradafoto.png') center 38% / cover no-repeat;
+    url('/images/IMG/paradafoto.png') center 38% / cover no-repeat;
   color: var(--cream);
   display: flex;
   flex-direction: column;
@@ -1809,29 +1809,59 @@ section {
   text-decoration: none;
 }
 
+.thanks-google {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #fff;
+  display: grid;
+  place-items: center;
+  flex: none;
+}
+
+.thanks-google svg {
+  width: 16px;
+  height: 16px;
+  display: block;
+}
+
 .thanks-note {
   margin-top: 22px;
 }
 
 .to-top {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 6px;
-  width: fit-content;
-  margin: 54px auto 0;
-  padding: 10px 18px;
-  border: 1px solid rgba(243, 199, 90, 0.5);
-  border-radius: 999px;
-  color: var(--gold-light);
-  font-weight: 800;
+  position: fixed;
+  z-index: 34;
+  right: 18px;
+  bottom: 22px;
+  display: grid;
+  place-items: center;
+  width: 52px;
+  height: 52px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: linear-gradient(180deg, var(--gold-light), var(--gold));
+  color: var(--ink);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.32);
   text-decoration: none;
+  transform: translateX(calc(100% + 28px));
+  opacity: 0;
+  pointer-events: none;
+  transition:
+    transform 0.45s ease,
+    opacity 0.35s ease;
+}
+
+.to-top.is-on {
+  transform: translateX(0);
+  opacity: 1;
+  pointer-events: auto;
 }
 
 .to-top:hover {
-  background: var(--gold);
-  border-color: var(--gold);
-  color: var(--ink);
+  filter: brightness(1.06);
 }
 
 @keyframes thanks-ripple {
@@ -1863,7 +1893,8 @@ section {
     opacity: 0;
   }
 
-  .host {
+  .host,
+  .to-top {
     transition: none;
   }
 

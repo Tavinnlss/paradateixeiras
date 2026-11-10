@@ -6,13 +6,15 @@ import SectionHeading from "./SectionHeading.vue";
   <section id="feijoada" class="band band-deep">
     <v-container>
       <div class="feijoada-layout">
-        <div>
-          <SectionHeading
-            align="left"
-            eyebrow="Almoço"
-            script="O mais pedido"
-            title=""
-          />
+        <div class="textFeijoadaSection">
+          
+            <SectionHeading class="teste2"
+              align="left"
+              eyebrow="Almoço"
+              script="O mais pedido"
+              title=""
+            />
+         
           <p class="mega">Feijoada</p>
           <p class="hero-copy">
             A estrela do nosso almoço é a feijoada! Preparada com carinho,
@@ -36,4 +38,27 @@ import SectionHeading from "./SectionHeading.vue";
 .feijoada-side {
   border: 1px solid var(--gold);
 }
+
+@media (max-width: 800px){
+ .textFeijoadaSection{
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ }
+
+.teste2{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+}
+
+
+/* @media (max-width: 800px) and (min-width: 500px){
+ 
+} */
+
 </style>

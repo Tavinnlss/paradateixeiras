@@ -12,13 +12,13 @@ const wa = whatsappLink(
     <v-container>
       <div class="media-copy sunday-layout">
         <div>
-          <SectionHeading
+          <SectionHeading class="titleSunday"
             align="left"
             eyebrow="Domingo"
             script="Portas fechadas"
             title="O salão pode ser seu"
           />
-          <p class="hero-copy" style="margin-top: 0">
+          <p class="hero-copy textSunday" style="margin-top: 0">
             Aos domingos, a Parada Teixeiras fecha as portas para o atendimento
             habitual, mas abre espaço para momentos especiais! Nosso ambiente
             pode ser reservado para aniversários, confraternizações e encontros
@@ -92,5 +92,25 @@ const wa = whatsappLink(
   .sunday-layout :deep(.display) {
     font-size: clamp(2.8rem, 6vw, 4.6rem);
   }
+
+  .titleSunday{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .titleSunday :deep(h2){
+    text-align: center;
+  }
+
+  .textSunday {
+    text-align: center;
+  }
+
+  .btn-gold{
+    margin: 0 auto;
+  }
+
 }
 </style>

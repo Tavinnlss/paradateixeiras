@@ -14,8 +14,8 @@ const wa = whatsappLink('Olá! Quero fazer um pedido para retirada na Parada Tei
         :lede="pickup.lede"
       />
       <div class="split">
-        <article v-for="option in pickup.options" :key="option.title" class="shift-card">
-          <p class="when">
+        <article v-for="option in pickup.options" :key="option.title" class="shift-card textPickup">
+          <p class="when titlePickup">
             <v-icon :icon="option.icon" size="18" />
             {{ option.title }}
           </p>
@@ -38,4 +38,21 @@ const wa = whatsappLink('Olá! Quero fazer um pedido para retirada na Parada Tei
   justify-content: center;
   margin-top: 28px;
 }
+
+.titlePickup{
+  color: var(--gold);
+}
+
+
+@media (max-width: 800px){
+ .textPickup{
+  text-align: center;
+ }
+}
+
+
+/* @media (max-width: 800px) and (min-width: 500px){
+ 
+} */
+
 </style>

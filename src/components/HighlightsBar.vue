@@ -21,7 +21,7 @@ import SectionHeading from "./SectionHeading.vue";
             <div class="icon-medal">
               <v-icon :icon="item.icon" size="28" />
             </div>
-            <h3>{{ item.title }}</h3>
+            <h3 class="textHighLightBar">{{ item.title }}</h3>
             <!-- <p>{{ item.text }}</p> -->
           </article>
         </v-col>
@@ -36,5 +36,9 @@ import SectionHeading from "./SectionHeading.vue";
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.textHighLightBar{
+  text-align: center;
 }
 </style>

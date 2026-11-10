@@ -35,15 +35,15 @@ function send() {
   <section id="contato" class="band band-alt">
     <v-container>
       <div class="contact-layout">
-        <div>
-          <SectionHeading
+        <div class="containerTextContact">
+          <SectionHeading class="textContact"
             align="left"
             eyebrow="Fale com a casa"
             script="Estamos por aqui"
             title="Entre em contato"
             lede="Pedido, aluguel de domingo ou uma dúvida sobre o cardápio. Chama no WhatsApp que a gente responde."
           />
-          <p class="hero-copy" style="margin-top: 0">
+          <p class="hero-copy numbetContact" style="margin-top: 0; ">
             <strong style="color: white"><v-icon icon="mdi-whatsapp" size="22" color="green" /> {{ site.phoneDisplay }}</strong><br />
             {{ site.addressLine }}, {{ site.city }}
           </p>
@@ -90,5 +90,35 @@ function send() {
 </template>
 
 <style scoped>
+
+@media (max-width: 800px){
+  .textContact{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .textContact :deep(h2){
+    align-items: center;
+  }
+
+  .textContact :deep(p){
+    text-align: center;
+  }
+
+  .containerTextContact{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .numbetContact{
+    text-align: center;
+  }
+
+
+
+}
+
 
 </style>

@@ -12,7 +12,7 @@ import SectionHeading from './SectionHeading.vue'
         lede="Sabor, qualidade e aquele atendimento acolhedor que fazem cada visita valer a pena."
       />
       <div class="split">
-        <article v-for="shift in shifts" :key="shift.id" class="shift-card" :class="{ 'is-night': shift.id === 'noite' }">
+        <article v-for="shift in shifts" :key="shift.id" class="shift-card textDayNight" :class="{ 'is-night': shift.id === 'noite' }">
           <p class="when">
             <v-icon :icon="shift.icon" size="18" />
             {{ shift.when }}
@@ -29,4 +29,15 @@ import SectionHeading from './SectionHeading.vue'
 .display{
   color: var(--gold);
 }
+
+@media (max-width: 800px){
+ .textDayNight{
+  text-align: center;
+ }
+}
+
+
+/* @media (max-width: 800px) and (min-width: 500px){
+ 
+} */
 </style>

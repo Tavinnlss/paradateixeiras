@@ -28,6 +28,6 @@ onBeforeUnmount(() => {
 <template>
   <aside class="host" :class="{ 'is-away': away }" :aria-hidden="away || undefined">
     <p class="host-bubble">Olá! Seja bem-vindo ao Parada.</p>
-    <img class="host-figure" src="/images/mascote.png?v=2" alt="" />
+    <img class="host-figure" src="/images/IMG/mascote.png?v=2" alt="" />
   </aside>
 </template>

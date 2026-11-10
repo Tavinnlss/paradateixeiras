@@ -29,19 +29,19 @@ onUnmounted(() => {
   <section id="inicio" class="hero">
     <v-container>
       <div class="hero-grid">
-        <div>
+        <div class="containerHeroSlider">
           <p class="hero-kicker">{{ site.phrase }} · desde {{ site.since }}</p>
           <p class="hero-script">Seu almoço e janta</p><br>
           <h1 class="hero-title">
             <span class="white">Merecem</span>
             <span class="gold">o melhor</span>
           </h1>
-          <p class="hero-copy">
+          <p class="hero-copy textHeroSlider">
             Aqui no <span class="textFocousFirst">Parada Teixeiras</span>, cada prato é preparado com
             <span class="textFocus">ingredientes frescos </span>, <span class="textFocus">receitas tradicionais</span> e aquele
             <span class="textFocus">sabor que lembra casa</span>.
           </p>
-          <div class="hero-actions">
+          <div class="hero-actions btnHeroSlider">
             <v-btn class="btn-gold" href="#cardapio" elevation="0" size="large"
               >Ver o cardápio</v-btn
             >
@@ -108,5 +108,31 @@ onUnmounted(() => {
 
 .hero{
   border-bottom: 0.5px solid var(--gold);
+}
+
+
+@media (max-width: 800px){
+  .containerHeroSlider{
+    text-align: center;
+  }
+
+  .textHeroSlider{
+    margin: 0 auto;
+    margin-top: 20px;
+  }
+
+  .btnHeroSlider{
+    justify-content: center;
+    width: 100%;
+  }
+}
+
+
+@media (max-width: 800px) and (min-width: 500px){
+  .hero-title{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
 }
 </style>

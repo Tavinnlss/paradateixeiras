@@ -12,11 +12,11 @@ function starIcon(rating, index) {
   <section id="avaliacoes" class="band band-deep">
     <v-container>
       <header class="reviews-head">
-        <div>
+        <div class="titleReview">
           <p class="reviews-kicker"><i aria-hidden="true"></i>{{ reviews.kicker }}</p>
           <h2>{{ reviews.title }}</h2>
+          <p class="reviews-note">{{ reviews.note }}</p>
         </div>
-        <p class="reviews-note">{{ reviews.note }}</p>
       </header>
       <div class="reviews-grid">
         <article v-for="item in reviews.items" :key="item.name" class="review-card">
@@ -42,3 +42,20 @@ function starIcon(rating, index) {
     </v-container>
   </section>
 </template>
+
+
+<style scoped>
+@media (max-width: 800px){
+ .titleReview{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+ }
+}
+
+/* 
+@media (max-width: 800px) and (min-width: 500px){
+ 
+} */
+</style>

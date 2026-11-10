@@ -46,42 +46,42 @@ export const nav = [
 
 export const slides = [
   {
-    src: "/images/sliders/slider003.png",
+    src: "/images/IMG/slider003.png",
     alt: "Prato feito servido no salão da Parada Teixeiras",
     // caption: 'Seu almoço merece o melhor',
   },
   {
-    src: "/images/sliders/slider002.png",
+    src: "/images/IMG/slider002.png",
     alt: "Prato feito servido no salão da Parada Teixeiras",
     // caption: 'Seu almoço merece o melhor',
   },
   {
-    src: "/images/sliders/slider001.png",
+    src: "/images/IMG/slider001.png",
     alt: "Tilápia com arroz, batata gratinada e salada",
     // caption: 'Tilápia com sabor e crocância',
   },
   {
-    src: "/images/sliders/slider004.png",
+    src: "/images/IMG/slider004.png",
     alt: "Pão com linguiça da Parada Teixeiras",
     // caption: 'O pão com linguiça mais famoso de Teixeiras',
   },
   {
-    src: "/images/sliders/slider005.png",
+    src: "/images/IMG/slider005.png",
     alt: "Delivery da Parada Teixeiras aos sábados e domingos",
     // caption: 'Peça pelo nosso delivery',
   },
   {
-    src: "/images/sliders/slider006.png",
+    src: "/images/IMG/slider006.png",
     alt: "Delivery da Parada Teixeiras aos sábados e domingos",
     // caption: 'Peça pelo nosso delivery',
   },
   {
-    src: "/images/sliders/slider007.png",
+    src: "/images/IMG/slider007.png",
     alt: "Delivery da Parada Teixeiras aos sábados e domingos",
     // caption: 'Peça pelo nosso delivery',
   },
   {
-    src: "/images/sliders/icedrink.png",
+    src: "/images/IMG/icedrink.png",
     alt: "Delivery da Parada Teixeiras aos sábados e domingos",
     // caption: 'Peça pelo nosso delivery',
   },
@@ -200,7 +200,7 @@ export const lunches = {
         badge: "Mais vendido",
         tag: "Quartas e sábados",
         featured: true,
-        image: "/images/cardapio/almoco/quarta/feijoadaparada.png",
+        image: "/images/IMG/feijoadaparada.png",
         imagePosition: "28% 42%",
         icon: "mdi-pot-steam",
       },
@@ -213,7 +213,7 @@ export const lunches = {
         badge: "Mais vendido",
         tag: "Especial de segunda-feira",
         featured: true,
-        image: "/images/cardapio/almoco/segunda/frangoComQuiabo.jpeg",
+        image: "/images/IMG/frangoComQuiabo.jpeg",
         imagePosition: "28% 42%",
         icon: "mdi-pot-steam",
       },
@@ -237,7 +237,7 @@ export const lunches = {
         tag: "Especial de segunda-feira",
         featured: true,
         image:
-          "/images/cardapio/almoco/segunda/fileDeTilapiaComBatataGratinada.jpeg",
+          "/images/IMG/fileDeTilapiaComBatataGratinada.jpeg",
         icon: "mdi-fish",
       },
     ),
@@ -248,7 +248,7 @@ export const lunches = {
       {
         tag: "Especial de segunda-feira",
         featured: true,
-        image: "/images/cardapio/almoco/segunda/fileDeTilapiaComFritas.jpeg",
+        image: "/images/IMG/fileDeTilapiaComFritas.jpeg",
         icon: "mdi-silverware-fork-knife",
       },
     ),
@@ -258,7 +258,7 @@ export const lunches = {
       "Arroz, feijão, ovo, fritas e salada.",
       {
         tag: "Todos os dias",
-        image: "/images/cardapio/almoco/segunda/bifeBovinoAcebolado.jpeg",
+        image: "/images/IMG/bifeBovinoAcebolado.jpeg",
         icon: "mdi-silverware-fork-knife",
       },
     ),
@@ -268,7 +268,7 @@ export const lunches = {
       "Arroz, feijão, ovo, fritas e salada.",
       {
         tag: "Todos os dias",
-        image: "/images/cardapio/almoco/segunda/bifeSuinoAcebolado.jpeg",
+        image: "/images/IMG/bifeSuinoAcebolado.jpeg",
         icon: "mdi-silverware-fork-knife",
       },
     ),
@@ -280,7 +280,7 @@ export const lunches = {
         badge: "Mais vendido",
         featured: true,
         tag: "Todos os dias",
-        image: "/images/cardapio/almoco/segunda/tropeirosuino.png",
+        image: "/images/IMG/tropeirosuino.png",
         icon: "mdi-silverware-fork-knife",
       },
     ),
@@ -290,7 +290,7 @@ export const lunches = {
       "Arroz, torresmo, ovo, fritas e couve.",
       {
         tag: "Todos os dias",
-        image: "/images/cardapio/almoco/segunda/tropeiroboi.png",
+        image: "/images/IMG/tropeiroboi.png",
         icon: "mdi-silverware-fork-knife",
       },
     ),
@@ -300,7 +300,7 @@ export const lunches = {
       "Arroz, torresmo, ovo, fritas e couve.",
       {
         tag: "Todos os dias",
-        image: "/images/cardapio/almoco/segunda/tropeirofrango.png",
+        image: "/images/IMG/tropeirofrango.png",
         icon: "mdi-silverware-fork-knife",
       },
     ),
@@ -311,7 +311,7 @@ export const lunches = {
 
       {
         tag: "Todos os dias",
-        image: "/images/cardapio/almoco/segunda/omelete.png",
+        image: "/images/IMG/omelete.png",
         icon: "mdi-silverware-fork-knife",
       },
     ),
@@ -335,7 +335,7 @@ export const lunches = {
         tag: "Aos sábados",
         badge: "Mais vendido",
         featured: true,
-        image: "/images/cardapio/almoco/segunda/parmegianaDeFrango.png",
+        image: "/images/IMG/parmegianaDeFrango.png",
         icon: "mdi-silverware-fork-knife",
       },
     ),
@@ -347,7 +347,7 @@ export const lunches = {
       {
         tag: "Indisponível ",
         unavailable: true,
-        image: "/images/cardapio/almoco/segunda/parmegianaTilapia.png",
+        image: "/images/IMG/parmegianaTilapia.png",
         icon: "mdi-silverware-fork-knife",
       },
     ),
@@ -358,7 +358,7 @@ export const lunches = {
       {
         featured: true,
         tag: "Especial de sexta-feira",
-        image: "/images/cardapio/almoco/segunda/tilapiaPure.png",
+        image: "/images/IMG/tilapiaPure.png",
         icon: "mdi-silverware-fork-knife",
       },
     ),
@@ -366,7 +366,7 @@ export const lunches = {
       featured: true,
       tag: "Especial de sexta-feira",
       badge: "Mais vendido",
-      image: "/images/cardapio/almoco/segunda/pernilComSalpicao.png",
+      image: "/images/IMG/pernilComSalpicao.png",
       icon: "mdi-silverware-fork-knife",
     }),
     plate(
@@ -376,7 +376,7 @@ export const lunches = {
       {
         tag: "Terça, quarta ou quinta",
         badge: "Prato variado",
-        image: "/images/cardapio/almoco/segunda/arrozComCostelinha.png",
+        image: "/images/IMG/arrozComCostelinha.png",
         icon: "mdi-silverware-fork-knife",
       },
     ),
@@ -387,7 +387,7 @@ export const lunches = {
       {
         tag: "Terça, quarta ou quinta",
         badge: "Prato variado",
-        image: "/images/cardapio/almoco/segunda/carneDePorcoFrita.png",
+        image: "/images/IMG/carneDePorcoFrita.png",
         icon: "mdi-silverware-fork-knife",
       },
     ),
@@ -398,7 +398,7 @@ export const lunches = {
       {
         tag: "Terça, quarta ou quinta",
         badge: "Prato variado",
-        image: "/images/cardapio/almoco/segunda/sobrecoxaMacarronada.png",
+        image: "/images/IMG/sobrecoxaMacarronada.png",
         icon: "mdi-silverware-fork-knife",
       },
     ),
@@ -409,7 +409,7 @@ export const lunches = {
       {
         tag: "Terça, quarta ou quinta",
         badge: "Prato variado",
-        image: "/images/cardapio/almoco/segunda/carneCozida.png",
+        image: "/images/IMG/carneCozida.png",
         icon: "mdi-silverware-fork-knife",
       },
     ),
@@ -420,7 +420,7 @@ export const lunches = {
       {
         tag: "Terça, quarta ou quinta",
         badge: "Prato variado",
-        image: "/images/cardapio/almoco/segunda/strogonoffDeFrando.png",
+        image: "/images/IMG/strogonoffDeFrando.png",
         icon: "mdi-silverware-fork-knife",
       },
     ),
@@ -431,7 +431,7 @@ export const lunches = {
       {
         tag: "Terça, quarta ou quinta",
         badge: "Prato variado",
-        image: "/images/cardapio/almoco/segunda/strogonoffBoi.png",
+        image: "/images/IMG/strogonoffBoi.png",
         icon: "mdi-silverware-fork-knife",
       },
     ),
@@ -442,7 +442,7 @@ export const lunches = {
       {
         tag: "Terça, quarta ou quinta",
         badge: "Prato variado",
-        image: "/images/cardapio/almoco/segunda/lasanhabolonhesa.png",
+        image: "/images/IMG/lasanhabolonhesa.png",
         icon: "mdi-silverware-fork-knife",
       },
     ),
@@ -453,7 +453,7 @@ export const lunches = {
       {
         tag: "Terça, quarta ou quinta",
         badge: "Prato variado",
-        image: "/images/cardapio/almoco/segunda/cremeDeMilho.png",
+        image: "/images/IMG/cremeDeMilho.png",
         icon: "mdi-silverware-fork-knife",
       },
     ),
@@ -464,7 +464,7 @@ export const lunches = {
       {
         tag: "Terça, quarta ou quinta",
         badge: "Prato variado",
-        image: "/images/cardapio/almoco/segunda/batataBaroaComFrango.png",
+        image: "/images/IMG/batataBaroaComFrango.png",
         icon: "mdi-silverware-fork-knife",
       },
     ),
@@ -475,7 +475,7 @@ export const lunches = {
       {
         tag: "Terça, quarta ou quinta",
         badge: "Prato variado",
-        image: "/images/cardapio/almoco/segunda/largatoAoMolhoMadeira.png",
+        image: "/images/IMG/largatoAoMolhoMadeira.png",
         icon: "mdi-silverware-fork-knife",
       },
     ),
@@ -486,7 +486,7 @@ export const lunches = {
       {
         tag: "Terça, quarta ou quinta",
         badge: "Prato variado",
-        image: "/images/cardapio/almoco/segunda/costelinhaAoMolhoBarbe.png",
+        image: "/images/IMG/costelinhaAoMolhoBarbe.png",
         icon: "mdi-silverware-fork-knife",
       },
     ),
@@ -497,7 +497,7 @@ export const lunches = {
       {
         tag: "Terça, quarta ou quinta",
         badge: "Prato variado",
-        image: "/images/cardapio/almoco/segunda/filedeFrangoMilanesa.png",
+        image: "/images/IMG/filedeFrangoMilanesa.png",
         icon: "mdi-silverware-fork-knife",
       },
     ),
@@ -508,7 +508,7 @@ export const lunches = {
       {
         tag: "Terça, quarta ou quinta",
         badge: "Prato variado",
-        image: "/images/cardapio/almoco/segunda/macarraoNaChapa.png",
+        image: "/images/IMG/macarraoNaChapa.png",
         icon: "mdi-silverware-fork-knife",
       },
     ),
@@ -519,7 +519,7 @@ export const lunches = {
       {
         tag: "Terça, quarta ou quinta",
         badge: "Prato variado",
-        image: "/images/cardapio/almoco/segunda/bidedefigadoAcebolado.png",
+        image: "/images/IMG/bidedefigadoAcebolado.png",
         icon: "mdi-silverware-fork-knife",
       },
     ),
@@ -530,7 +530,7 @@ export const lunches = {
       {
         tag: "Terça, quarta ou quinta",
         badge: "Prato variado",
-        image: "/images/cardapio/almoco/segunda/sobrecoxabaroa.png",
+        image: "/images/IMG/sobrecoxabaroa.png",
         icon: "mdi-silverware-fork-knife",
       },
     ),
@@ -541,7 +541,7 @@ export const lunches = {
       {
         tag: "Terça, quarta ou quinta",
         badge: "Prato variado",
-        image: "/images/cardapio/almoco/segunda/largatocremedemilho.png",
+        image: "/images/IMG/largatocremedemilho.png",
         icon: "mdi-silverware-fork-knife",
       },
     ),
@@ -552,7 +552,7 @@ export const lunches = {
       {
         tag: "Terça, quarta ou quinta",
         badge: "Prato variado",
-        image: "/images/cardapio/almoco/segunda/largatofritas.png",
+        image: "/images/IMG/largatofritas.png",
         icon: "mdi-silverware-fork-knife",
       },
     ),
@@ -563,7 +563,7 @@ export const lunches = {
       {
         tag: "Terça, quarta ou quinta",
         badge: "Prato variado",
-        image: "/images/cardapio/almoco/segunda/frangomacarronese.png",
+        image: "/images/IMG/frangomacarronese.png",
         icon: "mdi-silverware-fork-knife",
       },
     ),
@@ -577,7 +577,7 @@ export const lunches = {
         badge: "Mais vendido",
         tag: "Especial de segunda-feira",
         featured: true,
-        image: "/images/cardapio/almoco/segunda/frangoComQuiabo.jpeg",
+        image: "/images/IMG/frangoComQuiabo.jpeg",
         imagePosition: "28% 42%",
         icon: "mdi-pot-steam",
       },
@@ -590,7 +590,7 @@ export const lunches = {
         tag: "Especial de segunda-feira",
         featured: true,
         image:
-          "/images/cardapio/almoco/segunda/fileDeTilapiaComBatataGratinada.jpeg",
+          "/images/IMG/fileDeTilapiaComBatataGratinada.jpeg",
         icon: "mdi-fish",
       },
     ),
@@ -601,7 +601,7 @@ export const lunches = {
       {
         tag: "Especial de segunda-feira",
         featured: true,
-        image: "/images/cardapio/almoco/segunda/fileDeTilapiaComFritas.jpeg",
+        image: "/images/IMG/fileDeTilapiaComFritas.jpeg",
         icon: "mdi-silverware-fork-knife",
       },
     ),
@@ -613,7 +613,7 @@ export const lunches = {
         badge: "Mais vendido",
         featured: true,
         tag: "Todos os dias",
-        image: "/images/cardapio/almoco/segunda/tropeirosuino.png",
+        image: "/images/IMG/tropeirosuino.png",
         icon: "mdi-silverware-fork-knife",
       },
     ),
@@ -623,7 +623,7 @@ export const lunches = {
       "Arroz, torresmo, ovo, fritas e couve.",
       {
         tag: "Todos os dias",
-        image: "/images/cardapio/almoco/segunda/tropeiroboi.png",
+        image: "/images/IMG/tropeiroboi.png",
         icon: "mdi-silverware-fork-knife",
       },
     ),
@@ -633,7 +633,7 @@ export const lunches = {
       "Arroz, torresmo, ovo, fritas e couve.",
       {
         tag: "Todos os dias",
-        image: "/images/cardapio/almoco/segunda/tropeirofrango.png",
+        image: "/images/IMG/tropeirofrango.png",
         icon: "mdi-silverware-fork-knife",
       },
     ),
@@ -643,7 +643,7 @@ export const lunches = {
       "Arroz, feijão, ovo, fritas e salada.",
       {
         tag: "Todos os dias",
-        image: "/images/cardapio/almoco/segunda/bifeBovinoAcebolado.jpeg",
+        image: "/images/IMG/bifeBovinoAcebolado.jpeg",
         icon: "mdi-silverware-fork-knife",
       },
     ),
@@ -653,7 +653,7 @@ export const lunches = {
       "Arroz, feijão, ovo, fritas e salada.",
       {
         tag: "Todos os dias",
-        image: "/images/cardapio/almoco/segunda/bifeSuinoAcebolado.jpeg",
+        image: "/images/IMG/bifeSuinoAcebolado.jpeg",
         icon: "mdi-silverware-fork-knife",
       },
     ),
@@ -665,7 +665,7 @@ export const lunches = {
 
       {
         tag: "Todos os dias",
-        image: "/images/cardapio/almoco/segunda/omelete.png",
+        image: "/images/IMG/omelete.png",
         icon: "mdi-silverware-fork-knife",
       },
     ),
@@ -679,7 +679,7 @@ export const lunches = {
         badge: "Mais vendido",
         featured: true,
         tag: "Todos os dias",
-        image: "/images/cardapio/almoco/segunda/tropeirosuino.png",
+        image: "/images/IMG/tropeirosuino.png",
         icon: "mdi-silverware-fork-knife",
       },
     ),
@@ -689,7 +689,7 @@ export const lunches = {
       "Arroz, torresmo, ovo, fritas e couve.",
       {
         tag: "Todos os dias",
-        image: "/images/cardapio/almoco/segunda/tropeiroboi.png",
+        image: "/images/IMG/tropeiroboi.png",
         icon: "mdi-silverware-fork-knife",
       },
     ),
@@ -699,7 +699,7 @@ export const lunches = {
       "Arroz, torresmo, ovo, fritas e couve.",
       {
         tag: "Todos os dias",
-        image: "/images/cardapio/almoco/segunda/tropeirofrango.png",
+        image: "/images/IMG/tropeirofrango.png",
         icon: "mdi-silverware-fork-knife",
       },
     ),
@@ -709,7 +709,7 @@ export const lunches = {
       "Arroz, feijão, ovo, fritas e salada.",
       {
         tag: "Todos os dias",
-        image: "/images/cardapio/almoco/segunda/bifeBovinoAcebolado.jpeg",
+        image: "/images/IMG/bifeBovinoAcebolado.jpeg",
         icon: "mdi-silverware-fork-knife",
       },
     ),
@@ -719,7 +719,7 @@ export const lunches = {
       "Arroz, feijão, ovo, fritas e salada.",
       {
         tag: "Todos os dias",
-        image: "/images/cardapio/almoco/segunda/bifeSuinoAcebolado.jpeg",
+        image: "/images/IMG/bifeSuinoAcebolado.jpeg",
         icon: "mdi-silverware-fork-knife",
       },
     ),
@@ -731,7 +731,7 @@ export const lunches = {
 
       {
         tag: "Todos os dias",
-        image: "/images/cardapio/almoco/segunda/omelete.png",
+        image: "/images/IMG/omelete.png",
         icon: "mdi-silverware-fork-knife",
       },
     ),
@@ -745,7 +745,7 @@ export const lunches = {
         badge: "Mais vendido",
         tag: "Quartas e sábados",
         featured: true,
-        image: "/images/cardapio/almoco/quarta/feijoadaparada.png",
+        image: "/images/IMG/feijoadaparada.png",
         imagePosition: "28% 42%",
         icon: "mdi-pot-steam",
       },
@@ -758,7 +758,7 @@ export const lunches = {
         badge: "Mais vendido",
         featured: true,
         tag: "Todos os dias",
-        image: "/images/cardapio/almoco/segunda/tropeirosuino.png",
+        image: "/images/IMG/tropeirosuino.png",
         icon: "mdi-silverware-fork-knife",
       },
     ),
@@ -768,7 +768,7 @@ export const lunches = {
       "Arroz, torresmo, ovo, fritas e couve.",
       {
         tag: "Todos os dias",
-        image: "/images/cardapio/almoco/segunda/tropeiroboi.png",
+        image: "/images/IMG/tropeiroboi.png",
         icon: "mdi-silverware-fork-knife",
       },
     ),
@@ -778,7 +778,7 @@ export const lunches = {
       "Arroz, torresmo, ovo, fritas e couve.",
       {
         tag: "Todos os dias",
-        image: "/images/cardapio/almoco/segunda/tropeirofrango.png",
+        image: "/images/IMG/tropeirofrango.png",
         icon: "mdi-silverware-fork-knife",
       },
     ),
@@ -788,7 +788,7 @@ export const lunches = {
       "Arroz, feijão, ovo, fritas e salada.",
       {
         tag: "Todos os dias",
-        image: "/images/cardapio/almoco/segunda/bifeBovinoAcebolado.jpeg",
+        image: "/images/IMG/bifeBovinoAcebolado.jpeg",
         icon: "mdi-silverware-fork-knife",
       },
     ),
@@ -798,7 +798,7 @@ export const lunches = {
       "Arroz, feijão, ovo, fritas e salada.",
       {
         tag: "Todos os dias",
-        image: "/images/cardapio/almoco/segunda/bifeSuinoAcebolado.jpeg",
+        image: "/images/IMG/bifeSuinoAcebolado.jpeg",
         icon: "mdi-silverware-fork-knife",
       },
     ),
@@ -810,7 +810,7 @@ export const lunches = {
 
       {
         tag: "Todos os dias",
-        image: "/images/cardapio/almoco/segunda/omelete.png",
+        image: "/images/IMG/omelete.png",
         icon: "mdi-silverware-fork-knife",
       },
     ),
@@ -824,7 +824,7 @@ export const lunches = {
         badge: "Mais vendido",
         featured: true,
         tag: "Todos os dias",
-        image: "/images/cardapio/almoco/segunda/tropeirosuino.png",
+        image: "/images/IMG/tropeirosuino.png",
         icon: "mdi-silverware-fork-knife",
       },
     ),
@@ -834,7 +834,7 @@ export const lunches = {
       "Arroz, torresmo, ovo, fritas e couve.",
       {
         tag: "Todos os dias",
-        image: "/images/cardapio/almoco/segunda/tropeiroboi.png",
+        image: "/images/IMG/tropeiroboi.png",
         icon: "mdi-silverware-fork-knife",
       },
     ),
@@ -844,7 +844,7 @@ export const lunches = {
       "Arroz, torresmo, ovo, fritas e couve.",
       {
         tag: "Todos os dias",
-        image: "/images/cardapio/almoco/segunda/tropeirofrango.png",
+        image: "/images/IMG/tropeirofrango.png",
         icon: "mdi-silverware-fork-knife",
       },
     ),
@@ -854,7 +854,7 @@ export const lunches = {
       "Arroz, feijão, ovo, fritas e salada.",
       {
         tag: "Todos os dias",
-        image: "/images/cardapio/almoco/segunda/bifeBovinoAcebolado.jpeg",
+        image: "/images/IMG/bifeBovinoAcebolado.jpeg",
         icon: "mdi-silverware-fork-knife",
       },
     ),
@@ -864,7 +864,7 @@ export const lunches = {
       "Arroz, feijão, ovo, fritas e salada.",
       {
         tag: "Todos os dias",
-        image: "/images/cardapio/almoco/segunda/bifeSuinoAcebolado.jpeg",
+        image: "/images/IMG/bifeSuinoAcebolado.jpeg",
         icon: "mdi-silverware-fork-knife",
       },
     ),
@@ -876,7 +876,7 @@ export const lunches = {
 
       {
         tag: "Todos os dias",
-        image: "/images/cardapio/almoco/segunda/omelete.png",
+        image: "/images/IMG/omelete.png",
         icon: "mdi-silverware-fork-knife",
       },
     ),
@@ -886,7 +886,7 @@ export const lunches = {
       tag: "Especial de sexta-feira",
       featured: true,
       badge: "Mais vendido",
-      image: "/images/cardapio/almoco/segunda/pernilComSalpicao.png",
+      image: "/images/IMG/pernilComSalpicao.png",
       icon: "mdi-silverware-fork-knife",
     }),
     plate(
@@ -896,7 +896,7 @@ export const lunches = {
       {
         tag: "Especial de sexta-feira",
         featured: true,
-        image: "/images/cardapio/almoco/segunda/tilapiaPure.png",
+        image: "/images/IMG/tilapiaPure.png",
         icon: "mdi-silverware-fork-knife",
       },
     ),
@@ -908,7 +908,7 @@ export const lunches = {
       {
         tag: "Especial de segunda-feira",
         featured: true,
-        image: "/images/cardapio/almoco/segunda/fileDeTilapiaComFritas.jpeg",
+        image: "/images/IMG/fileDeTilapiaComFritas.jpeg",
         icon: "mdi-silverware-fork-knife",
       },
     ),
@@ -921,7 +921,7 @@ export const lunches = {
         badge: "Mais vendido",
         featured: true,
         tag: "Todos os dias",
-        image: "/images/cardapio/almoco/segunda/tropeirosuino.png",
+        image: "/images/IMG/tropeirosuino.png",
         icon: "mdi-silverware-fork-knife",
       },
     ),
@@ -931,7 +931,7 @@ export const lunches = {
       "Arroz, torresmo, ovo, fritas e couve.",
       {
         tag: "Todos os dias",
-        image: "/images/cardapio/almoco/segunda/tropeiroboi.png",
+        image: "/images/IMG/tropeiroboi.png",
         icon: "mdi-silverware-fork-knife",
       },
     ),
@@ -941,7 +941,7 @@ export const lunches = {
       "Arroz, torresmo, ovo, fritas e couve.",
       {
         tag: "Todos os dias",
-        image: "/images/cardapio/almoco/segunda/tropeirofrango.png",
+        image: "/images/IMG/tropeirofrango.png",
         icon: "mdi-silverware-fork-knife",
       },
     ),
@@ -951,7 +951,7 @@ export const lunches = {
       "Arroz, feijão, ovo, fritas e salada.",
       {
         tag: "Todos os dias",
-        image: "/images/cardapio/almoco/segunda/bifeBovinoAcebolado.jpeg",
+        image: "/images/IMG/bifeBovinoAcebolado.jpeg",
         icon: "mdi-silverware-fork-knife",
       },
     ),
@@ -961,7 +961,7 @@ export const lunches = {
       "Arroz, feijão, ovo, fritas e salada.",
       {
         tag: "Todos os dias",
-        image: "/images/cardapio/almoco/segunda/bifeSuinoAcebolado.jpeg",
+        image: "/images/IMG/bifeSuinoAcebolado.jpeg",
         icon: "mdi-silverware-fork-knife",
       },
     ),
@@ -973,7 +973,7 @@ export const lunches = {
 
       {
         tag: "Todos os dias",
-        image: "/images/cardapio/almoco/segunda/omelete.png",
+        image: "/images/IMG/omelete.png",
         icon: "mdi-silverware-fork-knife",
       },
     ),
@@ -1009,7 +1009,7 @@ export const lunches = {
         tag: "Aos sábados",
         badge: "Mais vendido",
         featured: true,
-        image: "/images/cardapio/almoco/segunda/parmegianaDeFrango.png",
+        image: "/images/IMG/parmegianaDeFrango.png",
         icon: "mdi-silverware-fork-knife",
       },
     ),
@@ -1018,7 +1018,7 @@ export const lunches = {
       "Parmegiana de frango - Serve duas pessoas.",
       "Arroz, fritas e salada EM DOBRO",
       {
-        image: "/images/cardapio/almoco/segunda/parmfrangoduaspessoas.png",
+        image: "/images/IMG/parmfrangoduaspessoas.png",
         tag: "Aos sábados",
         icon: "mdi-silverware-fork-knife",
       },
@@ -1031,7 +1031,7 @@ export const lunches = {
         badge: "Mais vendido",
         tag: "Quartas e sábados",
         featured: true,
-        image: "/images/cardapio/almoco/quarta/feijoadaparada.png",
+        image: "/images/IMG/feijoadaparada.png",
         imagePosition: "28% 42%",
         icon: "mdi-pot-steam",
       },
@@ -1041,7 +1041,7 @@ export const lunches = {
       "Feijoada",
       "Arroz, couve, laranja, vinagrete e farofa e bisteca - Serve duas pessoas",
       {
-        image: "/images/cardapio/almoco/segunda/feijoadaduaspessoas.png",
+        image: "/images/IMG/feijoadaduaspessoas.png",
         icon: "mdi-silverware-fork-knife",
       },
     ),
@@ -1053,7 +1053,7 @@ export const lunches = {
         badge: "Mais vendid",
         featured: true,
         tag: "Todos os dias",
-        image: "/images/cardapio/almoco/segunda/tropeirosuino.png",
+        image: "/images/IMG/tropeirosuino.png",
         icon: "mdi-silverware-fork-knife",
       },
     ),
@@ -1063,7 +1063,7 @@ export const lunches = {
       "Arroz, torresmo, ovo, fritas e couve.",
       {
         tag: "Todos os dias",
-        image: "/images/cardapio/almoco/segunda/tropeiroboi.png",
+        image: "/images/IMG/tropeiroboi.png",
         icon: "mdi-silverware-fork-knife",
       },
     ),
@@ -1073,7 +1073,7 @@ export const lunches = {
       "Arroz, torresmo, ovo, fritas e couve.",
       {
         tag: "Todos os dias",
-        image: "/images/cardapio/almoco/segunda/tropeirofrango.png",
+        image: "/images/IMG/tropeirofrango.png",
         icon: "mdi-silverware-fork-knife",
       },
     ),
@@ -1083,7 +1083,7 @@ export const lunches = {
       "Arroz, feijão, ovo, fritas e salada.",
       {
         tag: "Todos os dias",
-        image: "/images/cardapio/almoco/segunda/bifeBovinoAcebolado.jpeg",
+        image: "/images/IMG/bifeBovinoAcebolado.jpeg",
         icon: "mdi-silverware-fork-knife",
       },
     ),
@@ -1093,7 +1093,7 @@ export const lunches = {
       "Arroz, feijão, ovo, fritas e salada.",
       {
         tag: "Todos os dias",
-        image: "/images/cardapio/almoco/segunda/bifeSuinoAcebolado.jpeg",
+        image: "/images/IMG/bifeSuinoAcebolado.jpeg",
         icon: "mdi-silverware-fork-knife",
       },
     ),
@@ -1105,7 +1105,7 @@ export const lunches = {
 
       {
         tag: "Todos os dias",
-        image: "/images/cardapio/almoco/segunda/omelete.png",
+        image: "/images/IMG/omelete.png",
         icon: "mdi-silverware-fork-knife",
       },
     ),
@@ -1118,19 +1118,19 @@ export const portions = [
   plate("alcatrafritas", "Alcatra com fritas", "400g", {
     tag: "Porção",
     icon: "mdi-food-steak",
-    image: "/images/cardapio/porcao/alcatrafritas.png",
+    image: "/images/IMG/alcatrafritas.png",
   }),
 
   plate("alcatrafritas", "Alcatra com mandioca", "400g", {
     tag: "Porção",
     icon: "mdi-food-steak",
-    image: "/images/cardapio/porcao/alcatraemandioca.png",
+    image: "/images/IMG/alcatraemandioca.png",
   }),
 
   plate("fritasbacon", "Fritas com queijo e bacon", "400g", {
     tag: "Porção",
     icon: "mdi-food-steak",
-    image: "/images/cardapio/porcao/fritasbacon.png",
+    image: "/images/IMG/fritasbacon.png",
   }),
   plate("fritassimples", "Fritas simples", "400g", {
     tag: "Porção",
@@ -1157,7 +1157,7 @@ export const portions = [
   plate("filetilapia", "Filé de tilápia", "500g", {
     tag: "Porção",
     icon: "mdi-food-steak",
-    image: "/images/cardapio/porcao/porcaotilapia.png",
+    image: "/images/IMG/porcaotilapia.png",
   }),
 
   plate(
@@ -1167,14 +1167,14 @@ export const portions = [
     {
       tag: "Porção",
       icon: "mdi-food-steak",
-      //image:"/images/cardapio/porcao/porcaotilapia.png",
+      //image:"/images/IMG/porcaotilapia.png",
     },
   ),
 
   plate("frangoapassarinho", "Frango a passarinho", "1kg", {
     tag: "Porção",
     icon: "mdi-food-steak",
-    //image:"/images/cardapio/porcao/",
+    // image: ""
   }),
 
   //LANCHES:
@@ -1187,7 +1187,7 @@ export const portions = [
       tag: "Lanche",
       badge: "O famoso",
       featured: true,
-      image: "/images/paoComLinguicaParada.jpg",
+      image: "/images/IMG/paoComLinguicaParada.jpg",
       imagePosition: "center",
       icon: "mdi-baguette",
     },
@@ -1200,19 +1200,19 @@ export const portions = [
     {
       tag: "Lanche",
       icon: "mdi-hamburger",
-      image: "/images/cardapio/porcao/xtudo.png",
+      image: "/images/IMG/xtudo.png",
       badge: "Mais vendido",
     },
   ),
   plate("omelete", "Omelete", "2 ovos e queijo", {
     tag: "Lanche",
     icon: "mdi-egg",
-    //image: "/images/cardapio/porcao/xtudo.png",
+    //image: "/images/IMG/xtudo.png",
   }),
   plate("mistosimples", "Misto quente simples", "Pão, presunto e queijo", {
     tag: "Lanche",
     icon: "mdi-hamburger",
-    //image: "/images/cardapio/porcao/xtudo.png",
+    //image: "/images/IMG/xtudo.png",
   }),
   plate(
     "mistocompleto",
@@ -1221,7 +1221,7 @@ export const portions = [
     {
       tag: "Lanche",
       icon: "mdi-hamburger",
-      //image: "/images/cardapio/porcao/xtudo.png",
+      //image: "/images/IMG/xtudo.png",
     },
   ),
   plate(
@@ -1231,7 +1231,7 @@ export const portions = [
     {
       tag: "Lanche",
       icon: "mdi-hamburger",
-      //image: "/images/cardapio/porcao/xtudo.png",
+      //image: "/images/IMG/xtudo.png",
     },
   ),
   plate(
@@ -1241,7 +1241,7 @@ export const portions = [
     {
       tag: "Lanche",
       icon: "mdi-hamburger",
-      //image: "/images/cardapio/porcao/xtudo.png",
+      //image: "/images/IMG/xtudo.png",
     },
   ),
   plate(
@@ -1251,7 +1251,7 @@ export const portions = [
     {
       tag: "Lanche",
       icon: "mdi-hamburger",
-      //image: "/images/cardapio/porcao/xtudo.png",
+      //image: "/images/IMG/xtudo.png",
     },
   ),
 ];
@@ -1282,42 +1282,42 @@ export const reviews = {
       date: "12 ago. 2026",
       rating: 5,
       text: "O melhor e mais famoso pão com linguiça da região! Excelente atendimento, produtos de qualidade e um ambiente muito agradável. Recomendo de olhos fechados!",
-      photo: "/images/avaliacoes/user01.jpg",
+      photo: "/images/IMG/user01.jpg",
     },
     {
       name: "Natália Tavares",
       date: "03 set. 2026",
       rating: 5,
       text: "Um achado nessa rodovia. Passamos sempre e parávamos nos mesmos locais e tivemos a grata surpresa com esse restaurante. Atendimento excelente, comida saborosa e farta!",
-      photo: "/images/avaliacoes/user02.png",
+      photo: "/images/IMG/user02.png",
     },
     {
       name: "MC Guariba",
       date: "28 set. 2026",
       rating: 5,
       text: "Ambiente muito agradável , já rodei por muitos estados e nessa parada a comida é diferenciada , além do ótimo atendimento , de toda equipe , o dono Vinicius muito carismático e atencioso sempre , sempre que posso almoço",
-      photo: "/images/avaliacoes/user03.png",
+      photo: "/images/IMG/user03.png",
     },
     {
       name: "Kauan GAMER",
       date: "19 jul. 2026",
       rating: 5,
       text: "LUGAR MARAVILHOSO,EXCELENTE ATENDIMENTO,CERVEJA GELADA E COMIDA MINEIRA NO CAPRICHO...",
-      photo: "/images/avaliacoes/user04.png",
+      photo: "/images/IMG/user04.png",
     },
     {
       name: "Francine Silveira",
       date: "08 jul. 2026",
       rating: 5,
       text: "Comida deliciosa, ótimo atendimento, ambiente agradável para ir com a família.",
-      photo: "/images/avaliacoes/user05.png",
+      photo: "/images/IMG/user05.png",
     },
     {
       name: "Patricia Mol",
       date: "22 jun. 2026",
       rating: 5,
       text: "Um ambiente famíliar agradável, uma comida deliciosa, e um atendimento exemplar.",
-      photo: "/images/avaliacoes/user06.png",
+      photo: "/images/IMG/user06.png",
     },
   ],
 };

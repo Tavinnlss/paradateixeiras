@@ -12,7 +12,7 @@ const wa = whatsappLink("Olá! Quero falar com a Parada Teixeiras.");
           <div class="footer-brand">
             <span class="brand-logo">
               <img
-                src="/images/logoparadatexas.jpg"
+                src="/images/IMG/logoparadatexas.jpg"
                 alt="Logo Parada Teixeiras"
               />
             </span>
@@ -48,9 +48,9 @@ const wa = whatsappLink("Olá! Quero falar com a Parada Teixeiras.");
         <div class="logoParceiros">
           <h3>Parceiros</h3>
           <div class="container-parceiros">
-            <img src="/images/solENeve.png" alt="" />
-            <img src="/images/icedrink0002.png" alt="" />
-            <img src="/images/padariabranco.png" alt="" />
+            <img src="/images/IMG/solENeve.png" alt="" />
+            <img src="/images/IMG/icedrink0002.png" alt="" />
+            <img src="/images/IMG/padariabranco.png" alt="" />
           </div>
         </div>
       </div>

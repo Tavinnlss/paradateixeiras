@@ -29,7 +29,7 @@ const wa = whatsappLink('Olá! Quero pedir pelo delivery da Parada Teixeiras.')
           </div>
         </div>
         <div class="mascot-frame">
-          <img src="/images/delivery.jpeg" alt="Mascote da Parada Teixeiras com a bandeja na mão" />
+          <img src="/images/IMG/delivery.jpeg" alt="Mascote da Parada Teixeiras com a bandeja na mão" />
         </div>
       </div>
     </v-container>
