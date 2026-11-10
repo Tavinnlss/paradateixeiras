@@ -13,6 +13,7 @@ import ReviewsSection from './components/ReviewsSection.vue'
 import PickupSection from './components/PickupSection.vue'
 import LocationSection from './components/LocationSection.vue'
 import ContactSection from './components/ContactSection.vue'
+import ThanksSection from './components/ThanksSection.vue'
 import SiteFooter from './components/SiteFooter.vue'
 import HostMascot from './components/HostMascot.vue'
 </script>
@@ -35,6 +36,7 @@ import HostMascot from './components/HostMascot.vue'
       <LoyaltySection />
       <ReviewsSection />
       <ContactSection />
+      <ThanksSection />
     </v-main>
     <SiteFooter />
     <HostMascot />
