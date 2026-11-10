@@ -42,6 +42,7 @@ export const nav = [
   { label: "Aluguel", href: "#aluguel" },
   { label: "Cartão Fidelidade", href: "#fidelidade" },
   { label: "Clientes", href: "#avaliacoes" },
+  { label: "Redes sociais", href: "#footer" },
 ];
 
 export const slides = [

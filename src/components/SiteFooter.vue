@@ -5,7 +5,7 @@ const wa = whatsappLink("Olá! Quero falar com a Parada Teixeiras.");
 </script>
 
 <template>
-  <footer class="site-footer">
+  <footer class="site-footer" id="footer">
     <v-container>
       <div class="footer-grid">
         <div>
@@ -25,7 +25,7 @@ const wa = whatsappLink("Olá! Quero falar com a Parada Teixeiras.");
         </div>
 
         <div>
-          <h3>Redes</h3>
+          <h3>Redes Sociais</h3>
           <div class="social-row">
             <a
               :href="site.instagramUrl"
