@@ -22,12 +22,12 @@ import { Analytics } from "@vercel/analytics/vue"
 <template>
   <Analytics />
   <v-app>
-    <a class="skip-link" href="#inicio">Ir para o conteúdo</a>
+    <a class="skip-link" href="#inicio">Ir para o conteúdo.</a>
     <SiteHeader />
     <v-main>
       <HeroSlider />
       <HighlightsBar />
-      <MenuSection />
+      <MenuSection  />
       <DayNightSection />
       <PickupSection />
       <LocationSection />
