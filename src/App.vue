@@ -16,11 +16,10 @@ import ContactSection from './components/ContactSection.vue'
 import ThanksSection from './components/ThanksSection.vue'
 import SiteFooter from './components/SiteFooter.vue'
 import HostMascot from './components/HostMascot.vue'
-import { Analytics } from "@vercel/analytics/vue"
+
 </script>
 
 <template>
-  <Analytics />
   <v-app>
     <a class="skip-link" href="#inicio">Ir para o conteúdo</a>
     <SiteHeader />
@@ -44,4 +43,3 @@ import { Analytics } from "@vercel/analytics/vue"
     <HostMascot />
   </v-app>
 </template>
-
